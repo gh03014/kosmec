@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource 
+	  name="jdbc/KOSMEC1" 
+	  auth="Container" 
+	  type="javax.sql.DataSource"
+	  driverClassName="oracle.jdbc.OracleDriver"
+	  url="jdbc:oracle:thin:@dalma.dongguk.ac.kr:1521:stud1"
+	  username="asdf150" 
+	  password="c4iuser04" 
+	  maxTotal="50"
+	  maxIdle="50"
+	  maxWait="3000"
+	  minEvictableIdleTimeMillis="300000"
+	  >
+  </Resource> 
+</Context> 

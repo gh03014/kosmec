@@ -1,0 +1,16 @@
+.right{ /*주변에 있는 태그와의 거리 설정*/
+      margin-left: 67px;
+}
+.right2{
+      margin-left: 52px;
+}
+.right3{
+      margin-left: 65px;
+}
+.right4{
+      margin-left: 16px;
+}
+
+input{
+	background-color: #ccccff;
+}

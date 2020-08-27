@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		
+
+    <bean id="context" class="javax.naming.Context">
+    	<property name="lookup" value="java:comp/env/jdbc/KOSMEC1" />
+	</bean>
+	
+	<bean id="dbcpDataSource" class="javax.sql.DataSource" destroy-method="close">
+		<constructor-arg ref="context"/>
+		
+	</bean>
+	
+	<bean id="seminarDao" class="com.dongguk.dao.SeminarDaoJdbc">
+		<property name="dataSource" ref="dbcpDataSource" />
+	</bean>
+	
+	<bean id="seminarServiceTx" class="com.dongguk.service.SeminarServiceTx">
+		<property name="setDataSource" ref="dbcpDataSource" />
+		<property name="setSeminarDao" ref="seminarDao" />
+	</bean>
+</beans>
